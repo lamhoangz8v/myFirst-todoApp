@@ -1,15 +1,10 @@
 const express = require("express");
 const pool = require("./db");
-const { join } = require("node:path");
 const app = express();
 const path = require("path");
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
-
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-});
 
 // THÊM ĐOẠN NÀY ĐỂ TỰ ĐỘNG TẠO BẢNG
 pool
