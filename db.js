@@ -1,12 +1,11 @@
 const { Pool } = require("pg");
 
 const pool = new Pool({
+  // Chỉ dùng connectionString, nó đã chứa đầy đủ user/pass/host/port/db rồi
   connectionString: process.env.DATABASE_URL,
-  user: "postgres",
-  password: "23232323",
-  host: "localhost",
-  port: 5432,
-  database: "todo_list",
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 module.exports = pool;
