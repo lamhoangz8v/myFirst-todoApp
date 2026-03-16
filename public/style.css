@@ -1,0 +1,120 @@
+/* Reset cơ bản để các trình duyệt hiển thị giống nhau */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f7f9fc; /* Nền xám xanh cực nhạt */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px; /* Cách lề trên một khoảng */
+}
+
+/* Khung chính của ứng dụng */
+.container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Đổ bóng cực mềm */
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+/* Khu vực nhập liệu */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff; /* Đổi màu viền khi click vào */
+}
+
+/* Nút Thêm */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  transform: scale(0.97); /* Hiệu ứng lún xuống khi click */
+}
+
+/* Danh sách công việc */
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 12px;
+}
+
+li:last-child {
+  border-bottom: none; /* Bỏ đường kẻ ở dòng cuối cùng */
+}
+
+/* Chữ của công việc */
+.task-text {
+  flex: 1;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+/* Nút xóa thiết kế riêng cho đỡ "chói" */
+.delete-btn {
+  background-color: #ffeef0;
+  color: #dc3545;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background-color: #f8d7da;
+  color: #a71d2a;
+}
+
+/* Checkbox to hơn chút cho dễ bấm */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
